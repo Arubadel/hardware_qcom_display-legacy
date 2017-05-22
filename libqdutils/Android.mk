@@ -10,6 +10,8 @@ LOCAL_C_INCLUDES              += $(TOP)/hardware/qcom/display-legacy/libgralloc
 
 LOCAL_CFLAGS                  := $(common_flags)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
+LOCAL_COPY_HEADERS_TO         := $(common_header_export_path)
+LOCAL_COPY_HEADERS            := display_config.h mdp_version.h qdMetaData.h
 LOCAL_SRC_FILES               := profiler.cpp mdp_version.cpp \
                                  idle_invalidator.cpp egl_handles.cpp \
                                  cb_utils.cpp

@@ -4,11 +4,11 @@ include $(CLEAR_VARS)
 LOCAL_MODULE                  := hwcomposer.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_PATH             := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_TAGS             := optional
-LOCAL_C_INCLUDES              := $(common_includes)
+LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes) \
 LOCAL_SHARED_LIBRARIES        := $(common_libs) libEGL liboverlay libgenlock \
                                  libhwcexternal libqdutils libhardware_legacy \
                                  libdl libmemalloc libhwcservice
-
+LOCAL_SHARED_LIBRARIES        += libqdutils liboverlay libgenlock libhwcexternal libmemalloc libhwcservice liblog libutils libcutils libhardware libEGL libhardware_legacy
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"hwcomposer\"
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_SRC_FILES               := hwc.cpp          \
