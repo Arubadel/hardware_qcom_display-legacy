@@ -37,6 +37,7 @@
 
 #include "gralloc_priv.h"
 #include "software_converter.h"
+#include <malloc.h>
 
 #define DEBUG_MDP_ERRORS 1
 

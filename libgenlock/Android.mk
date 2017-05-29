@@ -4,8 +4,9 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE                  := libgenlock
 LOCAL_MODULE_TAGS             := optional
-LOCAL_C_INCLUDES              := $(common_includes)
+LOCAL_C_INCLUDES              := $(common_includes) $(kernel_includes)
 LOCAL_SHARED_LIBRARIES        := liblog libcutils
+LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 LOCAL_CFLAGS                  := $(common_flags) -DLOG_TAG=\"libgenlock\"
 LOCAL_SRC_FILES               := genlock.cpp
 include $(BUILD_SHARED_LIBRARY)

@@ -1,9 +1,9 @@
 #Common headers
-common_includes := hardware/qcom/display-legacy/libgralloc
-common_includes += hardware/qcom/display-legacy/libgenlock
-common_includes += hardware/qcom/display-legacy/liboverlay
-common_includes += hardware/qcom/display-legacy/libcopybit
-common_includes += hardware/qcom/display-legacy/libqdutils
+common_includes := hardware/qcom/display-caf/msm7x27a/libgralloc
+common_includes += hardware/qcom/display-caf/msm7x27a/libgenlock
+common_includes += hardware/qcom/display-caf/msm7x27a/liboverlay
+common_includes += hardware/qcom/display-caf/msm7x27a/libcopybit
+common_includes += hardware/qcom/display-caf/msm7x27a/libqdutils
 common_header_export_path := qcom/display
 common_deps += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 kernel_includes += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
