@@ -75,6 +75,9 @@ enum {
     /* Buffer content should be displayed on an primary display only */
     GRALLOC_USAGE_PRIVATE_INTERNAL_ONLY   =       0x04000000,
 
+    /* This flag is set for WFD usecase */
+    GRALLOC_USAGE_PRIVATE_WFD             =       0x00200000,
+
     /* Buffer content should be displayed on an external display only */
     GRALLOC_USAGE_PRIVATE_EXTERNAL_ONLY   =       0x08000000,
 
