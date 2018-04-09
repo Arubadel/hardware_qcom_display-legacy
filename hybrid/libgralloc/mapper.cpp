@@ -42,6 +42,7 @@
 #include "gr.h"
 #include "alloc_controller.h"
 #include "memalloc.h"
+#include <qdMetaData.h>
 
 using namespace gralloc;
 using android::sp;

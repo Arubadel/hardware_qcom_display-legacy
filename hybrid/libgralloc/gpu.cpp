@@ -27,6 +27,7 @@
 #include "gpu.h"
 #include "memalloc.h"
 #include "alloc_controller.h"
+#include <qdMetaData.h>
 
 using namespace gralloc;
 using android::sp;
