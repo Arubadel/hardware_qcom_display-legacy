@@ -6,6 +6,7 @@ common_includes += $(LOCAL_PATH)/../libqdutils
 common_includes += $(LOCAL_PATH)/../libhwcomposer
 common_includes += $(LOCAL_PATH)/../libhdmi
 common_includes += $(LOCAL_PATH)/../libqservice
+common_includes += $(LOCAL_PATH)/../libgenlock
 
 common_header_export_path := qcom/display
 common_deps += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
