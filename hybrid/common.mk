@@ -1,9 +1,12 @@
 #Common headers
-common_includes := hardware/qcom/display-caf/msm7x27a/libgralloc
-common_includes += hardware/qcom/display-caf/msm7x27a/libgenlock
-common_includes += hardware/qcom/display-caf/msm7x27a/liboverlay
-common_includes += hardware/qcom/display-caf/msm7x27a/libcopybit
-common_includes += hardware/qcom/display-caf/msm7x27a/libqdutils
+common_includes := $(LOCAL_PATH)/../libgralloc
+common_includes += $(LOCAL_PATH)/../liboverlay
+common_includes += $(LOCAL_PATH)/../libcopybit
+common_includes += $(LOCAL_PATH)/../libqdutils
+common_includes += $(LOCAL_PATH)/../libhwcomposer
+common_includes += $(LOCAL_PATH)/../libhdmi
+common_includes += $(LOCAL_PATH)/../libqservice
+
 common_header_export_path := qcom/display
 common_deps += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 kernel_includes += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -13,7 +16,8 @@ ifeq ($(TARGET_USES_POST_PROCESSING),true)
     common_includes += $(TARGET_OUT_HEADERS)/pp/inc
 endif
 
-common_libs := liblog libutils libcutils libhardware
+#Common libraries external to display HAL
+common_libs := liblog libutils libcutils libhardware libdl
 
 #Common C flags
 common_flags := -DDEBUG_CALC_FPS -Wno-missing-field-initializers
